@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html></html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pace Calculator</title>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+
+		<script async src="scripts.js"></script>
+
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h1 class="display-2">Simple Pace Calculator</h1>
+			<hr />
+			<form>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-default">Distance</span>
+					</div>
+					<input type="number" id="distance" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="How far did you run?" min="0">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<label class="input-group-text" for="distanceType">Miles or Kilometers?</label>
+					</div>
+					<select class="custom-select" id="distanceType">
+						<option value="miles">Miles</option>
+						<option value="kilometers">Kilometers</option>
+					</select>
+				</div>
+
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="">Hours | Minutes | Seconds</span>
+					</div>
+					<input id="hour" type="number" class="form-control" placeholder="Hours" min="0">
+					<input id="min" type="number" class="form-control" placeholder="Minutes" min="0">
+					<input id="sec" type="number" class="form-control" placeholder="Seconds" min="0">
+				</div>
+
+				<br />
+
+				<button type="button" class="btn btn-outline-dark btn-lg" onclick="calculate()">Calculate My Pace</button>
+
+			</form>
+
+
+		</div>
+	</body>
+</html>
